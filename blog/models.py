@@ -15,7 +15,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    auther = models.ForeignKey(User, on_delete=models.CASCADE)
+    auther = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return f'[{self.pk}] {self.title} :: {self.auther}'
