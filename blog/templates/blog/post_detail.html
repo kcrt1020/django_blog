@@ -90,7 +90,7 @@
                                         {% for comment in post.comment_set.iterator %}
                                 <div class="d-flex mb-4" id="comment-{{ comment.pk }}">
                                     <!-- Parent comment-->
-                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="{{ comment.get_avatar_url }}" alt="{{ comment.auther }}" width="60px" /></div>
                                     <div class="ms-3">
                                         {% if user.is_authenticated and comment.auther == user %}
                                         <div class="float-right">
