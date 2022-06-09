@@ -1,2 +1,10 @@
 # django_blog
-파이썬 웹프로그래밍
+개발 블로그
+https://mirandev.com/
+
+## 개발환경
+python
+django
+docker
+aws
+PyCharm Community Edition 2022.1.1
