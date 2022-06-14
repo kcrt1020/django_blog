@@ -10,3 +10,6 @@ https://mirandev.com/
 * docker
 * aws
 * PyCharm Community Edition 2022.1.1
+
+## 개발기간
+2022-05-23 ~
