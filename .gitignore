@@ -134,6 +134,5 @@ migrations/
 _media/
 .env.prod
 .env.prod.db
-init-letsencrypt.sh
 docker-compose.yml
 nginx/
