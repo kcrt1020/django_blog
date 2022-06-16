@@ -28,11 +28,11 @@
                         </header>
                         <!-- Preview image figure-->
                         <figure class="mb-4">
-                        {% if post.head_image %}
+                       <!-- {% if post.head_image %}
                           <img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="{{ post }} Card image cap" />
                         {% else %}
                           <img class="img-fluid rounded" src="https://picsum.photos/seed/{{ post.id }}/800/200" alt=random_image">
-                        {% endif %}
+                        {% endif %}-->
                         </figure>
                         <!-- Post content-->
                         <section class="mb-5">
@@ -79,7 +79,7 @@
                                     <div class="form-group">
                                     {{ comment_form | crispy }}
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-info">Submit</button>
                                 </form>
                                 {% else %}
                                 <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="#" data-toggle="modal" data-target="#loginModal">Log in and leave a comment</a>
@@ -93,7 +93,7 @@
                                     <div class="flex-shrink-0"><img class="rounded-circle" src="{{ comment.get_avatar_url }}" alt="{{ comment.auther }}" width="60px" /></div>
                                     <div class="ms-3">
                                         {% if user.is_authenticated and comment.auther == user %}
-                                        <div class="float-right">
+                                        <div class="float-end">
                                         <a role="button"
                                            class="btn btn-sm btn-info" id="comment-{{ comment.pk }}-update-btn"
                                            href="/blog/update_comment/{{ comment.pk }}/">edit</a>
@@ -129,7 +129,7 @@
                                         <div class="fw-bold"><b>{{ comment.auther.username }}&nbsp;</b>  <small class="text-muted">{{ comment.created_at }}</small> </div>
                                          {{ comment.content | linebreaks }}
                                         {% if comment.created_at != comment.modified_at %}
-                                        <p class="text-muted float-right"><small>Updated : {{ comment.modified_at }}</small></p>
+                                        <p class="text-muted float-end"><small>Updated : {{ comment.modified_at }}</small></p>
                                         {% endif %}
                                         <!-- Child comment 1-->
                                         <!--<div class="d-flex mt-4">

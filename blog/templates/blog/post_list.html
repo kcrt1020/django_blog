@@ -16,11 +16,11 @@
                    {% for p in post_list %}
                 <!-- Blog post-->
                <div class="card mb-4" id="post-{{ p.pk }}">
-                    {% if p.head_image %}
+                   <!-- {% if p.head_image %}
                         <img class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} Card image cap" />
                     {% else %}
                         <img class="card-img-top" src="https://picsum.photos/seed/{{ p.id }}/800/200" alt=random_image">
-                    {% endif %}
+                    {% endif %}-->
                     <div class="card-body">
                         {% if p.category %}
                         <span class="badge badge-secondary float-right">{{ p.category }}</span>
@@ -43,7 +43,7 @@
                             <br />
                         {% endif %}
 
-                        <a class="btn btn-primary" href="{{ p.get_absolute_url }}">Read more →</a>
+                        <a class="btn btn-info" href="{{ p.get_absolute_url }}">Read more →</a>
                     </div>
                         <div class="card-footer text-muted">
                             Posted by <a href="#">{{ p.auther | upper }}</a>
