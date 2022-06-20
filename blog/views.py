@@ -15,6 +15,7 @@ class PostList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(PostList, self).get_context_data()
+        context['posts'] = Post.objects.count()
         context['categories'] = Category.objects.all()
         context['no_category_post_count'] = Post.objects.filter(category=None).count()
         return context
@@ -141,7 +142,9 @@ class CommentUpdate(LoginRequiredMixin, UpdateView):
 
 
 class PostSearch(PostList):
-    paginate_by = None
+    ordering = '-pk'
+    paginate_by = 5
+
 
     def get_queryset(self):
         q = self.kwargs['q']
