@@ -1,8 +1,7 @@
 # django_blog
 파이썬 웹 프로그래밍을 이용한 개발 블로그
 
-## 링크
-https://mirandev.com/
+
 
 ## 개발환경
 * python
